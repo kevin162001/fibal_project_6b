@@ -8,4 +8,4 @@ import joblib
 
 def app(): 
     st.title("Forecast Curah Hujan")
-    st.image("Picture/newplot.png", caption="cuaca ekstrem", use_column_width=True)
+    st.image("picture/newplot.png", caption="cuaca ekstrem", use_column_width=True)
