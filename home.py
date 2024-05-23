@@ -11,7 +11,7 @@ def app():
     """, unsafe_allow_html=True)
     col1, col2 = st.columns([2, 1])
     with col2:
-       st.image("Picture/img-20230327-wa0013.jpg", caption="cuaca ekstrem", use_column_width=True)
+       st.image("picture/img-20230327-wa0013.jpg", caption="cuaca ekstrem", use_column_width=True)
     with col1:
        st.write("Dibuka pintu ke Dashboard prediksi Variabel-Variabel Metereologi yang memukau! "
             "Di sini, data bertemu dengan kreativitas, mengungkap rahasia langit dan atmosfer dalam segala warna. " 
