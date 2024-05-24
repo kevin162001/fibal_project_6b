@@ -4,8 +4,7 @@ def app():
     st.markdown("""
     <h1 style='text-align: center; color: black;'>tentang kami(synergisma) </h1>
     """, unsafe_allow_html=True)
-
- col1, col2 = st.columns([1, 1])
+    col1, col2 = st.columns([1, 1])
     with col1:
         st.markdown("""
         <h2 style='text-align: center; color: black;'>Problem Statement</h2>
