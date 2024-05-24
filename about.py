@@ -10,3 +10,17 @@ def app():
           dari Program Data Sience dan Artifitial Intelegence dari Sturtup Campus. Projek ini disusun semata-mata untuk
           tujuan pendidikan dan pembelajaran.
     """)
+    col1, col2 = st.columns([2, 1])
+    with col_1:
+        st.header("Problem statement")
+        st.markdown("""
+        Dalam beberapa tahun terakhir, perubahan suhu udara yang tidak terduga telah menjadi sebuah tantangan signifikan 
+        yang mempengaruhi pola cuaca regional di wilayah tertentu. Rata-rata, suhu udara telah menunjukkan tren penurunan 
+        sebesar 8.03 derajat Celcius setiap tahunnya. Penurunan suhu udara ini kemungkinan dipengaruhi oleh ketidakstabilan 
+        beberapa faktor seperti kecepatan angin, curah hujan, dan tekanan atmosfer, yang pada gilirannya mempengaruhi suhu 
+        udara di wilayah tertentu secara kompleks. Namun, diperlukan analisis lebih mendalam mengenai hubungan antara 
+        variabel meteorologi ini dengan suhu udara. Sebagai langkah selanjutnya, perlu dilakukan pengembangan model prediksi 
+        yang lebih canggih untuk memperkirakan perubahan nilai seluruh variabel meteorologi di masa mendatang dengan akurasi 
+        yang lebih tinggi.
+        """)
+        
