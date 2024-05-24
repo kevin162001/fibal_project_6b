@@ -34,4 +34,6 @@ def app():
               ngkatkan keselamatan publik, mengurangi risiko kerugian bisnis, dan meningkatkan efisiensi operasional.
           </div>
           """, unsafe_allow_html=True)
+
+    df = load_data("Data/train.csv")
   
