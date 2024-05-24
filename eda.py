@@ -37,6 +37,7 @@ def app():
           </div>
           """, unsafe_allow_html=True)
 
+     # Load data
     df = load_data("Data/train.csv")
     df_class = df.copy()
     df_class['date'] = pd.to_datetime(df_class['date'])
@@ -57,17 +58,18 @@ def app():
         # Tambahkan narasi untuk variabel lain di sini
     }
 
-    st.subheader("Horizontal Box Plot for each Variable")
+    st.subheader("Exploratory Data Analysis")
 
     # Loop through numeric columns
     for column in numeric_columns:
-        # Tampilkan narasi di sidebar
-        with st.sidebar:
-            st.write(f"## {column}")
-            st.write(variable_narratives.get(column, "Narasi untuk variabel ini belum ditambahkan"))
+        # Tampilkan narasi di samping box plot
+        st.write(f"## {column}")
+        st.write(variable_narratives.get(column, "Narasi untuk variabel ini belum ditambahkan"))
 
-        # Tampilkan box plot
-        st.write(f"### Box Plot for {column}")
-        fig = px.box(df_class, x=column, orientation='h', title=f"Horizontal Box Plot for {column}")
-        st.plotly_chart(fig)
+        # Tampilkan box plot dan narasi dalam satu baris
+        col1, col2 = st.columns([2, 3])
+        with col1:
+            st.write(f"### Box Plot for {column}")
+            fig = px.box(df_class, x=column, orientation='h', title=f"Horizontal Box Plot for {column}")
+            st.plotly_chart(fig)
   
