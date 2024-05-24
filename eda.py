@@ -42,7 +42,9 @@ def app():
     df_class['date'] = pd.to_datetime(df_class['date'])
     df_class.set_index('date', inplace=True)
 
+    numeric_columns = df_class.select_dtypes(include=['number']).columns.tolist()
+
     st.subheader("Box Plot for each Variable")
-    fig = px.box(df, y=df.columns, title="Box Plot for each Variable")
+    fig = px.box(df_class[numeric_columns], title="Box Plot for each Variable")
     st.plotly_chart(fig)
   
