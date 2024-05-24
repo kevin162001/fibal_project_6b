@@ -42,10 +42,32 @@ def app():
     df_class['date'] = pd.to_datetime(df_class['date'])
     df_class.set_index('date', inplace=True)
 
+    # Pilih kolom numerik
     numeric_columns = df_class.select_dtypes(include=['number']).columns.tolist()
 
-    st.subheader("Visualisasi Box Plot")
+    # Dictionary untuk menyimpan narasi untuk setiap variabel
+    variable_narratives = {
+        "Iws": "Ini adalah narasi untuk variabel Iws.",
+        "Ir": "Ini adalah narasi untuk variabel Ir.",
+        "pm2.5": "Ini adalah narasi untuk variabel pm2.5.",
+        "PRES": "Ini adalah narasi untuk variabel Iws.",
+        "cbwd": "Ini adalah narasi untuk variabel Iws.",
+        "DEWP": "Ini adalah narasi untuk variabel Iws.",
+        "Temperature": "Ini adalah narasi untuk variabel Iws.",
+        # Tambahkan narasi untuk variabel lain di sini
+    }
+
+    st.subheader("Horizontal Box Plot for each Variable")
+
+    # Loop through numeric columns
     for column in numeric_columns:
-        fig = px.box(df_class, x=column, orientation='h', title=f"Box Plot column {column}")
+        # Tampilkan narasi di sidebar
+        with st.sidebar:
+            st.write(f"## {column}")
+            st.write(variable_narratives.get(column, "Narasi untuk variabel ini belum ditambahkan"))
+
+        # Tampilkan box plot
+        st.write(f"### Box Plot for {column}")
+        fig = px.box(df_class, x=column, orientation='h', title=f"Horizontal Box Plot for {column}")
         st.plotly_chart(fig)
   
