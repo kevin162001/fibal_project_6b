@@ -11,7 +11,7 @@ def app():
           tujuan pendidikan dan pembelajaran.
     """)
     col1, col2 = st.columns([2, 1])
-    with col_1:
+    with col1:
         st.header("Problem statement")
         st.markdown("""
           Dalam beberapa tahun terakhir, perubahan suhu udara yang tidak terduga telah menjadi sebuah tantangan signifikan 
@@ -22,15 +22,15 @@ def app():
           variabel meteorologi ini dengan suhu udara. Sebagai langkah selanjutnya, perlu dilakukan pengembangan model prediksi 
           yang lebih canggih untuk memperkirakan perubahan nilai seluruh variabel meteorologi di masa mendatang dengan akurasi 
           yang lebih tinggi.
-        """)
-    with col1:
+          """)
+    with col2:
         st.header("Business solution")
         st.markdown("""
           Dengan memahami hubungan antara variabel meteorologi tertentu serta pengembangan model prediksi suhu udara berbasis 
           data ini dapat membantu lembaga meteorologi, peneliti iklim, atau bahkan bisnis yang terkait dengan cuaca misalnya, 
           perusahaan energi, pertanian dalam membuat keputusan yang lebih baik. Prakiraan cuaca yang lebih akurat dapat meni-
           ngkatkan keselamatan publik, mengurangi risiko kerugian bisnis, dan meningkatkan efisiensi operasional.
-        """)
+          """)
         
         
         
