@@ -36,4 +36,8 @@ def app():
           """, unsafe_allow_html=True)
 
     df = load_data("Data/train.csv")
+
+    st.subheader("Box Plot for each Variable")
+    fig = px.box(df, y=df.columns, title="Box Plot for each Variable")
+    st.plotly_chart(fig)
   
