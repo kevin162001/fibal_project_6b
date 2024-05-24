@@ -49,7 +49,9 @@ def app():
     st.markdown("""
         <h2 style='text-align: left; color: black;'>Visualisasi Box Plot</h2>
         """, unsafe_allow_html=True)
-    for column in numeric_columns:
-        fig = px.box(df_class, x=column, orientation='h', title=f"Box Plot column {column}")
+    for i, column in enumerate(numeric_columns):
+        # Set warna berbeda untuk setiap box plot
+        color = px.colors.qualitative.Plotly[i % len(px.colors.qualitative.Plotly)]
+        fig = px.box(df_class, x=column, orientation='h', title=f"Box Plot column {column}", color_discrete_sequence=[color])
         st.plotly_chart(fig)
   
