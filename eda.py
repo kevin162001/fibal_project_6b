@@ -37,6 +37,9 @@ def app():
           """, unsafe_allow_html=True)
 
     df = load_data("Data/train.csv")
+    df_class = df.copy()
+    df_class['date'] = pd.to_datetime(df_class['date'])
+    df_class.set_index('date', inplace=True)
 
     st.subheader("Box Plot for each Variable")
     fig = px.box(df, y=df.columns, title="Box Plot for each Variable")
