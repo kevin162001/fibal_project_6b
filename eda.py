@@ -47,7 +47,7 @@ def app():
     numeric_columns = [col for col in numeric_columns if col != 'id']
 
     st.markdown("""
-        <h2 style='text-align: center; color: black;'>Visualisasi Box Plot</h2>
+        <h2 style='text-align: left; color: black;'>Visualisasi Box Plot</h2>
         """, unsafe_allow_html=True)
     for column in numeric_columns:
         fig = px.box(df_class, x=column, orientation='h', title=f"Box Plot column {column}")
