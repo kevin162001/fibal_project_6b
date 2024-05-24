@@ -2,7 +2,7 @@ import streamlit as st
 def app():
     # Judul dan Informasi mengenai Dasboard
     st.markdown("""
-    <h1 style='text-align: center; color: black;'>eksplorasi data analysis </h1>
+    <h1 style='text-align: center; color: black;'>eksploratory data analysis </h1>
     """, unsafe_allow_html=True)
     col1, col2 = st.columns([1, 1])
     with col1:
