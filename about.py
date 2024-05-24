@@ -10,7 +10,7 @@ def app():
           dari Program Data Sience dan Artifitial Intelegence dari Sturtup Campus. Projek ini disusun semata-mata untuk
           tujuan pendidikan dan pembelajaran.
     """)
-    col1, col2 = st.columns([2, 1])
+    col1, col2 = st.columns([1, 1])
     with col1:
         st.header("Problem statement")
         st.markdown("""
