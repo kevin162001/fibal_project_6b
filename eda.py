@@ -42,13 +42,11 @@ def app():
     df_class['date'] = pd.to_datetime(df_class['date'])
     df_class.set_index('date', inplace=True)
 
+    # Pilih kolom numerik
     numeric_columns = df_class.select_dtypes(include=['number']).columns.tolist()
 
-    st.subheader("Visualisasi Box Plot")
+    st.subheader("Horizontal Box Plot for each Variable")
     for column in numeric_columns:
-        fig = px.box(df_class, x=column, orientation='h', title=f"Box Plot column {column}")
+        fig = px.box(df_class, x=column, orientation='h', title=f"Horizontal Box Plot for {column}")
         st.plotly_chart(fig)
-            st.write(f"### Box Plot for {column}")
-            fig = px.box(df_class, x=column, orientation='h', title=f"Horizontal Box Plot for {column}")
-            st.plotly_chart(fig)
   
