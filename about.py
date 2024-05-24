@@ -14,7 +14,7 @@ def app():
     with col1:
         st.header("Problem statement")
         st.markdown("""
-           <div style='text-align: center;'>
+           <div style='margin: auto;'>
               Dalam beberapa tahun terakhir, perubahan suhu udara yang tidak terduga telah menjadi sebuah tantangan signifikan 
               yang mempengaruhi pola cuaca regional di wilayah tertentu. Rata-rata, suhu udara telah menunjukkan tren penurunan 
               sebesar 8.03 derajat Celcius setiap tahunnya. Penurunan suhu udara ini kemungkinan dipengaruhi oleh ketidakstabilan 
@@ -28,7 +28,7 @@ def app():
     with col2:
         st.header("Business solution")
         st.markdown("""
-          <div style='text-align: center;'>
+          <div style='margin: auto;'>
               Dengan memahami hubungan antara variabel meteorologi tertentu serta pengembangan model prediksi suhu udara berbasis 
               data ini dapat membantu lembaga meteorologi, peneliti iklim, atau bahkan bisnis yang terkait dengan cuaca misalnya, 
               perusahaan energi, pertanian dalam membuat keputusan yang lebih baik. Prakiraan cuaca yang lebih akurat dapat meni-
