@@ -42,8 +42,9 @@ def app():
     df_class['date'] = pd.to_datetime(df_class['date'])
     df_class.set_index('date', inplace=True)
 
-    # Pilih kolom numerik
+    # Pilih kolom numerik, kecuali kolom 'id'
     numeric_columns = df_class.select_dtypes(include=['number']).columns.tolist()
+    numeric_columns = [col for col in numeric_columns if col != 'id']
 
     st.subheader("Visualisasi Box Plot")
     for column in numeric_columns:
