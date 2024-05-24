@@ -28,7 +28,7 @@ def app():
           </div>
           """, unsafe_allow_html=True)
     with col2:
-         st.markdown("""
+        st.markdown("""
         <h2 style='text-align: center; color: black;'>Business Solution</h2>
         """, unsafe_allow_html=True)
         st.markdown("""
