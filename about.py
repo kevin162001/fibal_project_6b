@@ -1,5 +1,4 @@
 import streamlit as st
-from web_function import load_data
 def app():
     # Judul dan Informasi mengenai Dasboard
     st.markdown("""
