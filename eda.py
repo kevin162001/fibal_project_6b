@@ -37,38 +37,17 @@ def app():
           </div>
           """, unsafe_allow_html=True)
 
-     # Load data
     df = load_data("Data/train.csv")
     df_class = df.copy()
     df_class['date'] = pd.to_datetime(df_class['date'])
     df_class.set_index('date', inplace=True)
 
-    # Pilih kolom numerik
     numeric_columns = df_class.select_dtypes(include=['number']).columns.tolist()
 
-    # Dictionary untuk menyimpan narasi untuk setiap variabel
-    variable_narratives = {
-        "Iws": "Ini adalah narasi untuk variabel Iws.",
-        "Ir": "Ini adalah narasi untuk variabel Ir.",
-        "pm2.5": "Ini adalah narasi untuk variabel pm2.5.",
-        "PRES": "Ini adalah narasi untuk variabel Iws.",
-        "cbwd": "Ini adalah narasi untuk variabel Iws.",
-        "DEWP": "Ini adalah narasi untuk variabel Iws.",
-        "Temperature": "Ini adalah narasi untuk variabel Iws.",
-        # Tambahkan narasi untuk variabel lain di sini
-    }
-
-    st.subheader("Exploratory Data Analysis")
-
-    # Loop through numeric columns
+    st.subheader("Visualisasi Box Plot")
     for column in numeric_columns:
-        # Tampilkan narasi di samping box plot
-        st.write(f"## {column}")
-        st.write(variable_narratives.get(column, "Narasi untuk variabel ini belum ditambahkan"))
-
-        # Tampilkan box plot dan narasi dalam satu baris
-        col1, col2 = st.columns([2, 3])
-        with col1:
+        fig = px.box(df_class, x=column, orientation='h', title=f"Box Plot column {column}")
+        st.plotly_chart(fig)
             st.write(f"### Box Plot for {column}")
             fig = px.box(df_class, x=column, orientation='h', title=f"Horizontal Box Plot for {column}")
             st.plotly_chart(fig)
