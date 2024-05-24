@@ -7,6 +7,6 @@ def app():
     st.markdown("""
           synergisma adalah sebuah tim yang dibentuk untuk menyelasaikan sebuah project untuk menganalisis dan 
           memprediksi variabel-variabel dari data-data metereologi. Pembuatan dashboard ini merupakan projek akhir 
-          dari Program DTS TSA 2023 yang dikerjakan oleh kelompok 4 (Kelas A). Projek ini disusun semata-mata untuk
+          dari Program Data Sience dan Artifitial Intelegence dari Sturtup Campus. Projek ini disusun semata-mata untuk
           tujuan pendidikan dan pembelajaran.
     """)
