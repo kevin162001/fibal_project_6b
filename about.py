@@ -12,7 +12,7 @@ def app():
     """)
     col1, col2 = st.columns([1, 1])
     with col1:
-        st.header(<h1 style='text-align: center; color: black;'>Problem statement </h1>
+        st.markdown(<h1 style='text-align: center; color: black;'>Problem statement </h1>
     """, unsafe_allow_html=True)
         st.markdown("""
            <div style='text-align: justify;'>
@@ -27,7 +27,7 @@ def app():
           </div>
           """, unsafe_allow_html=True)
     with col2:
-         st.header(<h1 style='text-align: center; color: black;'>Business solution </h1>
+        st.markdown(<h1 style='text-align: center; color: black;'>Business solution </h1>
     """, unsafe_allow_html=True)
         st.markdown("""
           <div style='text-align: justify;'>
