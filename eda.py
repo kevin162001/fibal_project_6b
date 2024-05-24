@@ -1,5 +1,6 @@
 import streamlit as st
 from web_function import load_data
+import plotly.express as px
 def app():
     # Judul dan Informasi mengenai Dasboard
     st.markdown("""
