@@ -47,5 +47,5 @@ def app():
     st.subheader("Box Plot for each Variable")
     for column in numeric_columns:
         fig = px.box(df_class, y=column, title=f"Box Plot for {column}")
-        st.plotly_chart(fig))
+        st.plotly_chart(fig)
   
